@@ -1,6 +1,6 @@
 :root {
-   --primary-color: rgba(88, 17, 23, 0.55);
-   --overlay-color: rgba(94, 34, 42, 0.65);
+   --primary-color: rgba(15, 110, 139, 0.55);
+   --overlay-color: rgba(18, 98, 104, 0.65);
    --menu-speed: 0.75s;
 }
 * {
@@ -19,6 +19,8 @@ body {
 }
 
 .showcase {
+   display: flex;
+   flex: none;
    background-color: var(--primary-color);
    color: #ffffff;
    height: 100vh;
@@ -26,7 +28,7 @@ body {
 }
 .showcase::before {
    content: "";
-   background: url(../img/nature.jpg) no-repeat center center/cover;
+   background: url(../img/cloudy.jpg) no-repeat center center/cover;
    position: absolute;
    top: 0;
    left: 0;
@@ -50,4 +52,25 @@ body {
 
 .showcase p {
    font-size: 1.1rem;
+}
+
+.img-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   margin: 10px;
+}
+img {
+   border-radius: 5px;
+   margin: 10px;
+   padding: 3px;
+   width: 200px;
+   height: 150px;
+   cursor: pointer;
+   opacity: 0.7;
+}
+
+img:hover {
+   box-shadow: 0 4px 4px 4px rgba(233, 160, 215, 0.55);
 }
